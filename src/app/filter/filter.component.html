@@ -1,0 +1,12 @@
+<div>
+    <h2>Filter Items by Category</h2>
+    <div *ngFor="let category of categories">
+      <label>
+        <input type="checkbox" (change)="toggleCategory(category)"> {{ category }}
+      </label>
+    </div>
+    <ul>
+      <li *ngFor="let item of filteredItems">{{ item.name }} (Category: {{ item.category }})</li>
+    </ul>
+  </div>
+  
